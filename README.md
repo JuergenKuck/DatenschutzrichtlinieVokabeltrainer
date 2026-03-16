@@ -1,1 +1,1 @@
-Datenschutzrichtlinie für Vokabeltrainer 
+Datenschutzrichtlinie für Vokabeltrainer
