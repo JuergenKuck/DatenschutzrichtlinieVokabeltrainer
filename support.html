@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Support – Vokabeltrainer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html,
+        body {
+            min-height: 100%;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(160deg, #2e2a6a 0%, #3d3898 40%, #5248b8 70%, #6a58c8 100%);
+            background-attachment: fixed;
+            color: #E0E0E0;
+            -webkit-font-smoothing: antialiased;
+            padding: 24px 16px 50px;
+        }
+
+        .page {
+            max-width: 480px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .hero-icon {
+            font-size: 36px;
+            margin-bottom: 10px;
+        }
+
+        .hero-title {
+            font-size: 24px;
+            font-weight: 800;
+            color: #FFFFFF;
+            margin-bottom: 6px;
+        }
+
+        .hero-subtitle {
+            font-size: 13px;
+            color: #DDD8FF;
+        }
+
+        .card {
+            background-color: #1c1850;
+            border: 1px solid rgba(108, 99, 255, 0.28);
+            border-radius: 16px;
+            padding: 18px;
+            margin-bottom: 12px;
+        }
+
+        .card-title {
+            font-size: 15px;
+            font-weight: 700;
+            color: #FFFFFF;
+            margin-bottom: 8px;
+        }
+
+        .card-content {
+            font-size: 14px;
+            line-height: 1.6;
+            color: #CCCCCC;
+        }
+
+        .card-content p {
+            margin-bottom: 10px;
+        }
+
+        .card-content p:last-child {
+            margin-bottom: 0;
+        }
+
+        .card-content ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 6px;
+        }
+
+        .card-content ul li {
+            display: flex;
+            align-items: flex-start;
+            gap: 8px;
+        }
+
+        .card-content ul li::before {
+            content: "›";
+            color: #a89fff;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        a {
+            color: #67E8F9;
+            text-decoration: none;
+            word-break: break-all;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        strong {
+            color: #FFFFFF;
+        }
+
+        .footer {
+            text-align: center;
+            padding-top: 30px;
+            font-size: 12px;
+            color: #C4BEE0;
+        }
+
+        .footer a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="page">
+
+        <div class="hero">
+            <div class="hero-icon">🛠️</div>
+            <div class="hero-title">Support</div>
+            <div class="hero-subtitle">Vokabeltrainer</div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Kontakt</div>
+            <div class="card-content">
+                <p>
+                    Bei Fragen, Problemen oder Feedback kannst du mich direkt per E-Mail erreichen:
+                </p>
+                <p>
+                    <a href="mailto:drj.kuck@googlemail.com">drj.kuck@googlemail.com</a>
+                </p>
+                <p>
+                    Dr. Jürgen Kuck<br>
+                    Eupener Str. 376A<br>
+                    52076 Aachen<br>
+                    Deutschland
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Häufige Fragen</div>
+            <div class="card-content">
+                <ul>
+                    <li>Werden meine Daten in der Cloud gespeichert?<br>
+                        <span style="color: #a89fff;">Nein – alle Daten bleiben ausschließlich auf deinem Gerät.</span>
+                    </li>
+                    <li>Brauche ich einen Account?<br>
+                        <span style="color: #a89fff;">Nein. Die App funktioniert vollständig ohne Registrierung.</span>
+                    </li>
+                    <li>Funktioniert die Übersetzung offline?<br>
+                        <span style="color: #a89fff;">Ja, nach einmaligem Download der Sprachmodelle ist keine
+                            Internetverbindung nötig.</span>
+                    </li>
+                    <li>Wie sichere ich meine Vokabeln?<br>
+                        <span style="color: #a89fff;">Im Premium-Modus steht eine Backup- und Wiederherstellungsfunktion
+                            zur Verfügung.</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Fehler melden</div>
+            <div class="card-content">
+                <p>
+                    Wenn du einen Fehler gefunden hast oder die App sich unerwartet verhält,
+                    sende bitte eine kurze Beschreibung des Problems an:
+                </p>
+                <p>
+                    <a href="mailto:drj.kuck@googlemail.com">drj.kuck@googlemail.com</a>
+                </p>
+                <p>
+                    Hilfreich dabei sind: iOS-Version, App-Version und eine kurze Beschreibung
+                    der Schritte, die zum Problem geführt haben.
+                </p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Feedback & Verbesserungsvorschläge</div>
+            <div class="card-content">
+                <p>
+                    Ich freue mich über jedes Feedback – ob Ideen für neue Funktionen,
+                    Sprachvorschläge oder allgemeine Anmerkungen.
+                    Schreib mir einfach eine E-Mail.
+                </p>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>
+                <a href="index.html">Zur App-Seite</a> ·
+                <a href="datenschutz.html">Datenschutzerklärung</a>
+            </p>
+            <p style="margin-top: 6px;">
+                © 2026 Dr. Jürgen Kuck · Aachen
+            </p>
+        </div>
+
+    </div>
+</body>
+
+</html>
