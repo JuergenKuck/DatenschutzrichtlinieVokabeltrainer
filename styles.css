@@ -1,0 +1,136 @@
+/* Reset */
+*,
+*::before,
+::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+/* Base */
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(160deg, #0a0820 0%, #150d40 40%, #1e1060 70%, #2D1B69 100%);
+    background-attachment: fixed;
+    color: #E0E0E0;
+    -webkit-font-smoothing: antialiased;
+    padding: 24px 16px 50px;
+}
+
+.page {
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+/* Hero */
+.hero {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.hero-icon {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.hero-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin-bottom: 6px;
+}
+
+.hero-subtitle {
+    font-size: 13px;
+    color: #AAAAAA;
+}
+
+/* Cards */
+.card {
+    background-color: #13103a;
+    border: 1px solid rgba(108, 99, 255, 0.28);
+    border-radius: 16px;
+    padding: 18px;
+    margin-bottom: 12px;
+}
+
+.card-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #FFFFFF;
+    margin-bottom: 8px;
+}
+
+.card-content {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #CCCCCC;
+}
+
+.card-content p {
+    margin-bottom: 10px;
+}
+
+.card-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Links */
+a {
+    color: #67E8F9;
+    text-decoration: none;
+    word-break: break-all;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+strong {
+    color: #FFFFFF;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 12px;
+    color: #555580;
+}
+
+.footer a {
+    color: #6C63FF;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+.section-label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #6C63FF;
+    margin: 24px 0 10px;
+}
+
+.screenshot-row {
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+    padding-bottom: 6px;
+}
+
+.screenshot-row img {
+    width: 220px;
+    border-radius: 18px;
+    flex-shrink: 0;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+}
