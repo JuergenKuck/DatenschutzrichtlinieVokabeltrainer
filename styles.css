@@ -15,7 +15,7 @@ body {
 /* Base */
 body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(160deg, #0a0820 0%, #150d40 40%, #1e1060 70%, #2D1B69 100%);
+    background: linear-gradient(160deg, #2e2a6a 0%, #3d3898 40%, #5248b8 70%, #6a58c8 100%);
     background-attachment: fixed;
     color: #E0E0E0;
     -webkit-font-smoothing: antialiased;
@@ -124,19 +124,27 @@ strong {
 /* Container für horizontales Scrollen */
 .screenshot-row {
     display: flex;
-    gap: 12px;             /* Abstand zwischen Screens */
-    overflow-x: auto;      /* Horizontal scrollen */
-    scroll-snap-type: x mandatory; /* Optional: rasten beim scrollen */
+    gap: 12px;
+    /* Abstand zwischen Screens */
+    overflow-x: auto;
+    /* Horizontal scrollen */
+    scroll-snap-type: x mandatory;
+    /* Optional: rasten beim scrollen */
     padding-bottom: 12px;
-    -webkit-overflow-scrolling: touch; /* flüssiges Scrollen auf Mobil */
+    -webkit-overflow-scrolling: touch;
+    /* flüssiges Scrollen auf Mobil */
 }
 
 /* Screenshots */
 .screenshot-row img {
-    height: 450px;           /* Max Höhe anpassen */
-    width: auto;             /* Proportional skalieren */
-    flex-shrink: 0;          /* Nicht kleiner werden */
+    height: 450px;
+    /* Max Höhe anpassen */
+    width: auto;
+    /* Proportional skalieren */
+    flex-shrink: 0;
+    /* Nicht kleiner werden */
     border-radius: 18px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.4);
-    scroll-snap-align: start; /* Optional: rasten */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    scroll-snap-align: start;
+    /* Optional: rasten */
 }
