@@ -27,7 +27,7 @@
 
         body {
             font-family: 'Inter', sans-serif;
-            background: linear-gradient(160deg, #0a0820 0%, #150d40 40%, #1e1060 70%, #2D1B69 100%);
+            background: linear-gradient(160deg, #2e2a6a 0%, #3d3898 40%, #5248b8 70%, #6a58c8 100%);
             background-attachment: fixed;
             color: #E0E0E0;
             -webkit-font-smoothing: antialiased;
@@ -50,13 +50,17 @@
             width: 88px;
             height: 88px;
             border-radius: 22px;
-            background: linear-gradient(135deg, #6C63FF 0%, #8B5CF6 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            overflow: hidden;
             margin: 0 auto 20px;
-            font-size: 42px;
             box-shadow: 0 8px 32px rgba(108, 99, 255, 0.45);
+            background: #FFFFFF;
+        }
+
+        .hero-app-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
 
         .hero-title {
@@ -70,7 +74,7 @@
 
         .hero-subtitle {
             font-size: 15px;
-            color: #AAAAAA;
+            color: #DDD8FF;
             line-height: 1.55;
             margin-bottom: 28px;
         }
@@ -94,28 +98,31 @@
         }
 
         .badge-free {
-            background: rgba(108, 99, 255, 0.18);
-            border: 1px solid rgba(108, 99, 255, 0.4);
-            color: #a89fff;
+            background: rgba(108, 99, 255, 0.25);
+            border: 1px solid rgba(168, 159, 255, 0.7);
+            color: #d4d0ff;
+            box-shadow: 0 0 10px rgba(108, 99, 255, 0.45);
         }
 
         .badge-offline {
-            background: rgba(34, 197, 94, 0.15);
-            border: 1px solid rgba(34, 197, 94, 0.35);
+            background: rgba(34, 197, 94, 0.2);
+            border: 1px solid rgba(134, 239, 172, 0.7);
             color: #86efac;
+            box-shadow: 0 0 10px rgba(34, 197, 94, 0.4);
         }
 
         .badge-private {
-            background: rgba(6, 182, 212, 0.15);
-            border: 1px solid rgba(6, 182, 212, 0.35);
+            background: rgba(6, 182, 212, 0.2);
+            border: 1px solid rgba(103, 232, 249, 0.7);
             color: #67e8f9;
+            box-shadow: 0 0 10px rgba(6, 182, 212, 0.4);
         }
 
         .cta-btn {
             display: inline-flex;
             align-items: center;
             gap: 8px;
-            background: linear-gradient(135deg, #6C63FF 0%, #8B5CF6 100%);
+            background: linear-gradient(135deg, #1a0a4a 0%, #2d1068 100%);
             color: #FFFFFF;
             font-size: 16px;
             font-weight: 700;
@@ -123,7 +130,8 @@
             border-radius: 14px;
             text-decoration: none;
             letter-spacing: 0.2px;
-            box-shadow: 0 4px 20px rgba(108, 99, 255, 0.4);
+            border: 1.5px solid rgba(168, 159, 255, 0.6);
+            box-shadow: 0 4px 24px rgba(30, 10, 80, 0.6), 0 0 12px rgba(108, 99, 255, 0.3);
             transition: opacity 0.15s;
         }
 
@@ -133,7 +141,7 @@
 
         /* ── Cards ── */
         .card {
-            background-color: #13103a;
+            background-color: #1c1850;
             border: 1px solid rgba(108, 99, 255, 0.28);
             border-radius: 16px;
             padding: 18px 18px;
@@ -311,7 +319,7 @@
 
         /* ── Premium card ── */
         .card-premium {
-            background: linear-gradient(135deg, #1a1445 0%, #221558 100%);
+            background: linear-gradient(135deg, #201660 0%, #2a1a6a 100%);
             border: 1.5px solid rgba(255, 215, 0, 0.35);
             border-radius: 16px;
             padding: 20px 18px;
@@ -354,7 +362,7 @@
         }
 
         .stat-card {
-            background: #13103a;
+            background: #1c1850;
             border: 1px solid rgba(108, 99, 255, 0.22);
             border-radius: 14px;
             padding: 14px 10px;
@@ -372,13 +380,33 @@
             line-height: 1.3;
         }
 
+        /* ── Screenshots ── */
+        .screenshot-row {
+            display: flex;
+            gap: 12px;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            padding-bottom: 12px;
+            -webkit-overflow-scrolling: touch;
+            margin-bottom: 12px;
+        }
+
+        .screenshot-row img {
+            height: 320px;
+            width: auto;
+            flex-shrink: 0;
+            border-radius: 18px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            scroll-snap-align: start;
+        }
+
         /* ── Divider ── */
         .section-label {
             font-size: 11px;
             font-weight: 700;
             letter-spacing: 1.2px;
             text-transform: uppercase;
-            color: #6C63FF;
+            color: #FFFFFF;
             margin: 24px 0 10px;
         }
 
@@ -387,11 +415,11 @@
             text-align: center;
             padding-top: 32px;
             font-size: 12px;
-            color: #555580;
+            color: #C4BEE0;
         }
 
         .footer a {
-            color: #6C63FF;
+            color: #FFFFFF;
             text-decoration: none;
         }
 
@@ -406,8 +434,8 @@
 
         <!-- ── Hero ── -->
         <div class="hero">
-            <div class="hero-app-icon">📱</div>
-            <h1 class="hero-title">Vokabeltrainer</h1>
+            <div class="hero-app-icon"><img src="images/app_icon.png" alt="Vokabeltrainer App Icon"></div>
+            <h1 class="hero-title">Kuck - Vokabeltrainer</h1>
             <p class="hero-subtitle">
                 Kein Account. Keine Cloud. Nur die Vokabeln, die du lernen willst.
             </p>
@@ -423,7 +451,7 @@
                 <span>↗</span>
             </a>
         </div>
-        
+
         <div class="section-label">App Einblicke</div>
 
         <div class="screenshot-row">
@@ -434,7 +462,7 @@
             <img src="images/screen 5.png" alt="App Screenshot 5">
         </div>
 
- 
+
         <!-- ── Intro-Karten ── -->
         <div class="section-label">So funktioniert's</div>
 
@@ -525,7 +553,7 @@
             </div>
             <div class="card-body">
                 <p>
-                    Neue Vokabeln landen zuerst in deiner <strong style="color:#fde047;">Inbox</strong>.
+                    Neue Vokabeln landen zuerst in deiner <strong style="color:#fde047;">Merkliste</strong>.
                     Erst wenn du sie freigibst, werden sie Teil deines Trainings.
                 </p>
                 <p style="color: #a89fff; font-weight: 600; margin-top: 4px;">
@@ -626,7 +654,8 @@
         <!-- ── Footer ── -->
         <div class="footer">
             <p>
-                <a href="datenschutz.html">Datenschutzerklärung</a>
+                <a href="datenschutz.html">Datenschutzerklärung</a> ·
+                <a href="support.html">Support</a>
             </p>
             <p style="margin-top: 6px;">© 2026 Dr. Jürgen Kuck · Aachen</p>
         </div>
