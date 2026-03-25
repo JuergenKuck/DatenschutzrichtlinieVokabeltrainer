@@ -666,7 +666,22 @@
     <div id="lightbox" class="lightbox">
         <img id="lightbox-img" src="" alt="">
     </div>
-    <script src="lightbox.js"></script>
+    <script>
+        const images = document.querySelectorAll('.screenshot-row img');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+
+        images.forEach(img => {
+            img.addEventListener('click', () => {
+                lightbox.classList.add('active');
+                lightboxImg.src = img.src;
+            });
+        });
+
+        lightbox.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+        });
+    </script>
 </body>
 
 </html>
