@@ -128,7 +128,7 @@ body {
 
 /* ── Cards ── */
 .card {
-    background-color: #1c1850;
+    background-color: #12274A;
     border: 1px solid rgba(108, 99, 255, 0.28);
     border-radius: 16px;
     padding: 18px;
@@ -306,12 +306,12 @@ body {
 
 /* ── Premium card ── */
 .card-premium {
-    background: linear-gradient(135deg, #201660 0%, #2a1a6a 100%);
-    border: 1.5px solid rgba(255, 215, 0, 0.35);
+    background: linear-gradient(135deg, #1a0a4a 0%, #2d1068 100%);
+    border: 1.5px solid rgba(168, 159, 255, 0.6);
     border-radius: 16px;
     padding: 20px 18px;
     margin-bottom: 12px;
-    box-shadow: 0 4px 24px rgba(255, 215, 0, 0.08);
+    box-shadow: 0 4px 24px rgba(30, 10, 80, 0.6), 0 0 12px rgba(108, 99, 255, 0.3);
 }
 
 .premium-header {
@@ -349,7 +349,7 @@ body {
 }
 
 .stat-card {
-    background: #1c1850;
+    background: #12274A;
     border: 1px solid rgba(108, 99, 255, 0.22);
     border-radius: 14px;
     padding: 14px 10px;
@@ -368,13 +368,22 @@ body {
 }
 
 /* ── Screenshots ── */
+.screenshot-frame {
+    background: #183462;
+    border-top: 1px solid rgba(108, 99, 255, 0.4);
+    border-left: 1px solid rgba(108, 99, 255, 0.4);
+    border-right: 1px solid rgba(108, 99, 255, 0.4);
+    border-radius: 16px 16px 0 0;
+    padding: 12px 12px 0;
+    margin-bottom: 12px;
+}
+
 .screenshot-row {
     display: flex;
     gap: 12px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     padding-bottom: 12px;
-    margin-bottom: 12px;
 }
 
 .screenshot-row img {
