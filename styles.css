@@ -24,6 +24,12 @@ body {
     padding: 24px 16px 50px;
 }
 
+body.lightbox-open {
+    position: fixed;
+    overflow: hidden;
+    width: 100%;
+}
+
 .page {
     max-width: 480px;
     margin: 0 auto;

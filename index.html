@@ -667,19 +667,39 @@
         <img id="lightbox-img" src="" alt="">
     </div>
     <script>
-        const images = document.querySelectorAll('.screenshot-row img');
+        const items = document.querySelectorAll('.screenshot');
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
 
-        images.forEach(img => {
-            img.addEventListener('click', () => {
+        let scrollY = 0;
+
+        items.forEach(item => {
+            item.addEventListener('click', () => {
+                const img = item.querySelector('img');
+
+                // 📌 Scrollposition speichern
+                scrollY = window.scrollY;
+
+                // 📌 Body fixieren
+                document.body.classList.add('lightbox-open');
+                document.body.style.top = `-${scrollY}px`;
+
+                // 📌 Bild anzeigen
                 lightbox.classList.add('active');
                 lightboxImg.src = img.src;
             });
         });
 
         lightbox.addEventListener('click', () => {
+            // Lightbox schließen
             lightbox.classList.remove('active');
+
+            // Body zurücksetzen
+            document.body.classList.remove('lightbox-open');
+            document.body.style.top = '';
+
+            // 📌 Zur alten Position zurück
+            window.scrollTo(0, scrollY);
         });
     </script>
 </body>
