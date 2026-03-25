@@ -389,10 +389,6 @@
             padding-bottom: 12px;
             -webkit-overflow-scrolling: touch;
             margin-bottom: 12px;
-            overflow-x: auto;
-            /* normal scrollbar */
-            overscroll-behavior: contain;
-            /* verhindert Scroll an Body */
         }
 
         .screenshot-row img {
@@ -677,43 +673,46 @@
 
         let scrollY = 0;
 
-        items.forEach(item => {
-            item.addEventListener('click', () => {
-                const img = item.querySelector('img');
+        function lockScroll() {
+            scrollY = window.scrollY;
+            document.body.style.position = 'fixed';
+            document.body.style.top = `-${scrollY}px`;
+            document.body.style.width = '100%';
 
-                scrollY = window.scrollY;
-
-                // Body fixieren
-                document.body.style.position = 'fixed';
-                document.body.style.top = `-${scrollY}px`;
-                document.body.style.width = '100%';
-
-                // Alle Scroll-Container blockieren
-                document.querySelectorAll('.screenshot-row').forEach(row => {
-                    row.style.overflow = 'hidden';
-                });
-
-                // Lightbox öffnen
-                lightbox.classList.add('active');
-                lightboxImg.src = img.src;
+            // Alle Scroll-Container sperren
+            document.querySelectorAll('.screenshot-row').forEach(row => {
+                row.dataset.oldOverflow = row.style.overflow;
+                row.style.overflow = 'hidden';
             });
-        });
+        }
 
-        lightbox.addEventListener('click', () => {
-            lightbox.classList.remove('active');
-
-            // Body zurücksetzen
+        function unlockScroll() {
             document.body.style.position = '';
             document.body.style.top = '';
             document.body.style.width = '';
 
-            // Scroll-Container zurücksetzen
             document.querySelectorAll('.screenshot-row').forEach(row => {
-                row.style.overflow = 'auto';
+                row.style.overflow = row.dataset.oldOverflow || 'auto';
             });
 
-            // Scroll wieder auf ursprüngliche Position
             window.scrollTo(0, scrollY);
+        }
+
+        // Lightbox öffnen
+        items.forEach(item => {
+            item.addEventListener('click', () => {
+                const img = item.querySelector('img');
+                lightbox.classList.add('active');
+                lightboxImg.src = img.src;
+
+                lockScroll();
+            });
+        });
+
+        // Lightbox schließen
+        lightbox.addEventListener('click', () => {
+            lightbox.classList.remove('active');
+            unlockScroll();
         });
     </script>
 </body>
