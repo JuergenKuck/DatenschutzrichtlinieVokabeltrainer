@@ -185,3 +185,9 @@ strong {
     -webkit-user-select: none;
     user-select: none;
 }
+
+.screenshot-row img {
+    -webkit-touch-callout: none;
+    /* verhindert Menü */
+    user-select: none;
+}
