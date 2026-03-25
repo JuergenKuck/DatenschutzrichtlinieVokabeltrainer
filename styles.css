@@ -109,7 +109,7 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    background: linear-gradient(135deg, #1a0a4a 0%, #2d1068 100%);
+    background: #0C1A31;
     color: #FFFFFF;
     font-size: 16px;
     font-weight: 700;
@@ -128,7 +128,7 @@ body {
 
 /* ── Cards ── */
 .card {
-    background-color: #12274A;
+    background-color: #0C1A31;
     border: 1px solid rgba(108, 99, 255, 0.28);
     border-radius: 16px;
     padding: 18px;
@@ -306,7 +306,7 @@ body {
 
 /* ── Premium card ── */
 .card-premium {
-    background: linear-gradient(135deg, #1a0a4a 0%, #2d1068 100%);
+    background: #0C1A31;
     border: 1.5px solid rgba(168, 159, 255, 0.6);
     border-radius: 16px;
     padding: 20px 18px;
@@ -349,7 +349,7 @@ body {
 }
 
 .stat-card {
-    background: #12274A;
+    background: #0C1A31;
     border: 1px solid rgba(108, 99, 255, 0.22);
     border-radius: 14px;
     padding: 14px 10px;
@@ -369,11 +369,9 @@ body {
 
 /* ── Screenshots ── */
 .screenshot-frame {
-    background: #183462;
-    border-top: 1px solid rgba(108, 99, 255, 0.4);
-    border-left: 1px solid rgba(108, 99, 255, 0.4);
-    border-right: 1px solid rgba(108, 99, 255, 0.4);
-    border-radius: 16px 16px 0 0;
+    background: #0C1A31;
+    border: 1px solid rgba(108, 99, 255, 0.28);
+    border-radius: 16px;
     padding: 12px 12px 0;
     margin-bottom: 12px;
 }
