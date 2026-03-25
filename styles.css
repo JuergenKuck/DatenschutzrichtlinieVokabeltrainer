@@ -28,6 +28,8 @@ body.lightbox-open {
     position: fixed;
     overflow: hidden;
     width: 100%;
+    touch-action: none;
+    /* 🔥 verhindert Touch-Scroll */
 }
 
 .page {
