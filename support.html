@@ -10,136 +10,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet" />
-
+    <link rel="stylesheet" href="styles.css" />
     <style>
-        *,
-        *::before,
-        *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html,
-        body {
-            min-height: 100%;
-        }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            background: linear-gradient(160deg, #2e2a6a 0%, #3d3898 40%, #5248b8 70%, #6a58c8 100%);
-            background-attachment: fixed;
-            color: #E0E0E0;
-            -webkit-font-smoothing: antialiased;
-            padding: 24px 16px 50px;
-        }
-
-        .page {
-            max-width: 480px;
-            margin: 0 auto;
-        }
-
-        .hero {
-            text-align: center;
-            margin-bottom: 28px;
-        }
-
-        .hero-icon {
-            font-size: 36px;
-            margin-bottom: 10px;
-        }
-
-        .hero-title {
-            font-size: 24px;
-            font-weight: 800;
-            color: #FFFFFF;
-            margin-bottom: 6px;
-        }
-
-        .hero-subtitle {
-            font-size: 13px;
-            color: #DDD8FF;
-        }
-
-        .card {
-            background-color: #1c1850;
-            border: 1px solid rgba(108, 99, 255, 0.28);
-            border-radius: 16px;
-            padding: 18px;
-            margin-bottom: 12px;
-        }
-
-        .card-title {
-            font-size: 15px;
-            font-weight: 700;
-            color: #FFFFFF;
-            margin-bottom: 8px;
-        }
-
-        .card-content {
-            font-size: 14px;
-            line-height: 1.6;
-            color: #CCCCCC;
-        }
-
-        .card-content p {
-            margin-bottom: 10px;
-        }
-
-        .card-content p:last-child {
-            margin-bottom: 0;
-        }
-
-        .card-content ul {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            margin-top: 6px;
-        }
-
-        .card-content ul li {
-            display: flex;
-            align-items: flex-start;
-            gap: 8px;
-        }
-
-        .card-content ul li::before {
-            content: "›";
-            color: #a89fff;
-            font-weight: 700;
-            flex-shrink: 0;
-        }
-
-        a {
-            color: #67E8F9;
-            text-decoration: none;
-            word-break: break-all;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        strong {
-            color: #FFFFFF;
-        }
-
-        .footer {
-            text-align: center;
-            padding-top: 30px;
-            font-size: 12px;
-            color: #C4BEE0;
-        }
-
-        .footer a {
-            color: #FFFFFF;
-            text-decoration: none;
-        }
-
-        .footer a:hover {
-            text-decoration: underline;
-        }
+        body { padding: 24px 16px 50px; }
+        a { color: #67E8F9; text-decoration: none; word-break: break-all; }
+        a:hover { text-decoration: underline; }
+        .card-title { font-size: 15px; font-weight: 700; color: #FFFFFF; margin-bottom: 8px; }
+        .card-content ul { list-style: none; display: flex; flex-direction: column; gap: 8px; margin-top: 6px; }
+        .card-content ul li { display: flex; align-items: flex-start; gap: 8px; }
+        .card-content ul li::before { content: "›"; color: #a89fff; font-weight: 700; flex-shrink: 0; }
     </style>
 </head>
 

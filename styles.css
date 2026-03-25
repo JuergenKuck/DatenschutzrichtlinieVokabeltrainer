@@ -14,7 +14,7 @@ body {
 
 body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(160deg, #2e2a6a 0%, #3d3898 40%, #5248b8 70%, #6a58c8 100%);
+    background: linear-gradient(180deg, #2F68C5 0%, #533794 100%);
     background-attachment: fixed;
     color: #E0E0E0;
     -webkit-font-smoothing: antialiased;
@@ -85,24 +85,24 @@ body {
 }
 
 .badge-free {
-    background: rgba(108, 99, 255, 0.25);
-    border: 1px solid rgba(168, 159, 255, 0.7);
+    background: rgba(108, 99, 255, 0.40);
+    border: 1px solid rgba(200, 195, 255, 0.95);
     color: #d4d0ff;
-    box-shadow: 0 0 10px rgba(108, 99, 255, 0.45);
+    box-shadow: 0 0 14px rgba(108, 99, 255, 0.8);
 }
 
 .badge-offline {
-    background: rgba(34, 197, 94, 0.2);
-    border: 1px solid rgba(134, 239, 172, 0.7);
+    background: rgba(34, 197, 94, 0.32);
+    border: 1px solid rgba(134, 239, 172, 0.95);
     color: #86efac;
-    box-shadow: 0 0 10px rgba(34, 197, 94, 0.4);
+    box-shadow: 0 0 14px rgba(34, 197, 94, 0.75);
 }
 
 .badge-private {
-    background: rgba(6, 182, 212, 0.2);
-    border: 1px solid rgba(103, 232, 249, 0.7);
+    background: rgba(6, 182, 212, 0.32);
+    border: 1px solid rgba(103, 232, 249, 0.95);
     color: #67e8f9;
-    box-shadow: 0 0 10px rgba(6, 182, 212, 0.4);
+    box-shadow: 0 0 14px rgba(6, 182, 212, 0.75);
 }
 
 .cta-btn {
@@ -155,17 +155,20 @@ body {
     line-height: 1.3;
 }
 
-.card-body {
+.card-body,
+.card-content {
     font-size: 14px;
     line-height: 1.6;
     color: #CCCCCC;
 }
 
-.card-body p {
+.card-body p,
+.card-content p {
     margin-bottom: 8px;
 }
 
-.card-body p:last-child {
+.card-body p:last-child,
+.card-content p:last-child {
     margin-bottom: 0;
 }
 
