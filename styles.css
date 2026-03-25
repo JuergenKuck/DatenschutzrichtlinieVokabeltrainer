@@ -150,15 +150,14 @@ strong {
 }
 
 .screenshot-row {
+    background: transparent;
     display: flex;
     gap: 12px;
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     padding-bottom: 12px;
     -webkit-overflow-scrolling: touch;
-
     max-width: 100%;
-    /* 🔥 verhindert Overflow */
 }
 
 /* ── Lightbox ── */
