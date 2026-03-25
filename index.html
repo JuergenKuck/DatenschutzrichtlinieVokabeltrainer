@@ -389,6 +389,10 @@
             padding-bottom: 12px;
             -webkit-overflow-scrolling: touch;
             margin-bottom: 12px;
+            overflow-x: auto;
+            /* normal scrollbar */
+            overscroll-behavior: contain;
+            /* verhindert Scroll an Body */
         }
 
         .screenshot-row img {
@@ -677,28 +681,38 @@
             item.addEventListener('click', () => {
                 const img = item.querySelector('img');
 
-                // 📌 Scrollposition speichern
                 scrollY = window.scrollY;
 
-                // 📌 Body fixieren
-                document.body.classList.add('lightbox-open');
+                // Body fixieren
+                document.body.style.position = 'fixed';
                 document.body.style.top = `-${scrollY}px`;
+                document.body.style.width = '100%';
 
-                // 📌 Bild anzeigen
+                // Alle Scroll-Container blockieren
+                document.querySelectorAll('.screenshot-row').forEach(row => {
+                    row.style.overflow = 'hidden';
+                });
+
+                // Lightbox öffnen
                 lightbox.classList.add('active');
                 lightboxImg.src = img.src;
             });
         });
 
         lightbox.addEventListener('click', () => {
-            // Lightbox schließen
             lightbox.classList.remove('active');
 
             // Body zurücksetzen
-            document.body.classList.remove('lightbox-open');
+            document.body.style.position = '';
             document.body.style.top = '';
+            document.body.style.width = '';
 
-            // 📌 Zur alten Position zurück
+            // Scroll-Container zurücksetzen
+            document.querySelectorAll('.screenshot-row').forEach(row => {
+                row.style.overflow = 'auto';
+            });
+
+            // Scroll wieder auf ursprüngliche Position
             window.scrollTo(0, scrollY);
         });
     </script>
