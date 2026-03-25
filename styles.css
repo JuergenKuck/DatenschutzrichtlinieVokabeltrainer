@@ -179,9 +179,11 @@ strong {
     box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
 }
 
-/* verhindert Auswahl + Kontextmenü */
-.screenshot-row img {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    user-select: none;
+.screenshot {
+    flex-shrink: 0;
+}
+
+.screenshot img {
+    pointer-events: none;
+    /* 🔥 verhindert Long-Press komplett */
 }
