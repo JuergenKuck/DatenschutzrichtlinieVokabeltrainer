@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
         rel="stylesheet" />
     <style>
-        /* Reset */
+        /* ── Reset ── */
         *,
         *::before,
         *::after {
@@ -32,17 +32,16 @@
             background-attachment: fixed;
             color: #E0E0E0;
             -webkit-font-smoothing: antialiased;
-            padding: 0;
         }
 
-        /* Layout */
+        /* ── Layout ── */
         .page {
             max-width: 480px;
             margin: 0 auto;
             padding: 0 16px 60px;
         }
 
-        /* Hero */
+        /* ── Hero ── */
         .hero {
             padding: 52px 0 36px;
             text-align: center;
@@ -141,7 +140,7 @@
             opacity: 0.88;
         }
 
-        /* Cards */
+        /* ── Cards ── */
         .card {
             background-color: #1c1850;
             border: 1px solid rgba(108, 99, 255, 0.28);
@@ -184,7 +183,7 @@
             margin-bottom: 0;
         }
 
-        /* Feature list */
+        /* ── Feature list ── */
         .feature-list {
             list-style: none;
             display: flex;
@@ -238,7 +237,7 @@
             color: #FFD700;
         }
 
-        /* Privacy grid */
+        /* ── Privacy triple ── */
         .privacy-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -266,7 +265,123 @@
             line-height: 1.3;
         }
 
-        /* Screenshots */
+        /* ── Direction cards ── */
+        .direction-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            align-items: center;
+            gap: 10px;
+            margin-top: 12px;
+        }
+
+        .dir-card {
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.25);
+            border-radius: 12px;
+            padding: 10px 12px;
+            text-align: center;
+        }
+
+        .dir-card-label {
+            font-size: 11px;
+            color: #86efac;
+            font-weight: 600;
+            margin-bottom: 3px;
+        }
+
+        .dir-card-lang {
+            font-size: 13px;
+            font-weight: 700;
+            color: #FFFFFF;
+        }
+
+        .dir-arrow {
+            font-size: 18px;
+            color: #6C63FF;
+        }
+
+        /* ── Language chips ── */
+        .lang-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .lang-chip {
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 600;
+            background: rgba(108, 99, 255, 0.15);
+            border: 1px solid rgba(108, 99, 255, 0.3);
+            color: #a89fff;
+        }
+
+        /* ── Premium card ── */
+        .card-premium {
+            background: linear-gradient(135deg, #201660 0%, #2a1a6a 100%);
+            border: 1.5px solid rgba(255, 215, 0, 0.35);
+            border-radius: 16px;
+            padding: 20px 18px;
+            margin-bottom: 12px;
+            box-shadow: 0 4px 24px rgba(255, 215, 0, 0.08);
+        }
+
+        .premium-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 14px;
+        }
+
+        .premium-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            background: rgba(255, 215, 0, 0.15);
+            border: 1px solid rgba(255, 215, 0, 0.35);
+            border-radius: 20px;
+            padding: 4px 12px;
+            font-size: 12px;
+            font-weight: 700;
+            color: #FFD700;
+        }
+
+        .premium-title {
+            font-size: 18px;
+            font-weight: 800;
+            color: #FFFFFF;
+        }
+
+        /* ── Stats row ── */
+        .stats-row {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .stat-card {
+            background: #1c1850;
+            border: 1px solid rgba(108, 99, 255, 0.22);
+            border-radius: 14px;
+            padding: 14px 10px;
+            text-align: center;
+        }
+
+        .stat-icon {
+            font-size: 20px;
+            margin-bottom: 6px;
+        }
+
+        .stat-label {
+            font-size: 11.5px;
+            color: #AAAAAA;
+            line-height: 1.3;
+        }
+
+        /* ── Screenshots ── */
         .screenshot-row {
             display: flex;
             gap: 12px;
@@ -285,12 +400,10 @@
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
             scroll-snap-align: start;
             cursor: pointer;
-            -webkit-touch-callout: none;
-            -webkit-user-select: none;
-            user-select: none;
+            /* zeigt klickbarkeit */
         }
 
-        /* Section labels */
+        /* ── Divider ── */
         .section-label {
             font-size: 11px;
             font-weight: 700;
@@ -300,7 +413,7 @@
             margin: 24px 0 10px;
         }
 
-        /* Footer */
+        /* ── Footer ── */
         .footer {
             text-align: center;
             padding-top: 32px;
@@ -317,7 +430,7 @@
             text-decoration: underline;
         }
 
-        /* Lightbox */
+        /* ── Lightbox ── */
         .lightbox {
             position: fixed;
             inset: 0;
@@ -351,7 +464,7 @@
 <body>
     <div class="page">
 
-        <!-- Hero -->
+        <!-- ── Hero ── -->
         <div class="hero">
             <div class="hero-app-icon"><img src="images/app_icon.png" alt="Vokabeltrainer App Icon"></div>
             <h1 class="hero-title">Kuck - Vokabeltrainer</h1>
@@ -372,6 +485,35 @@
         </div>
 
         <div class="section-label">App Einblicke</div>
+
+        <div class="screenshot-row">
+            <img class="screenshot" src="images/screen 1.png" alt="App Screenshot 1">
+            <img class="screenshot" src="images/screen 2.png" alt="App Screenshot 2">
+            <img class="screenshot" src="images/screen 3.png" alt="App Screenshot 3">
+            <img class="screenshot" src="images/screen 4.png" alt="App Screenshot 4">
+            <img class="screenshot" src="images/screen 5.png" alt="App Screenshot 5">
+        </div>
+        <div class="hero">
+            <div class="hero-app-icon"><img src="images/app_icon.png" alt="Vokabeltrainer App Icon"></div>
+            <h1 class="hero-title">Kuck - Vokabeltrainer</h1>
+            <p class="hero-subtitle">
+                Kein Account. Keine Cloud. Nur die Vokabeln, die du lernen willst.
+            </p>
+
+            <div class="badge-row">
+                <span class="badge badge-offline">✓ 100 % Offline</span>
+                <span class="badge badge-private">✓ Privat</span>
+                <span class="badge badge-free">✓ Kostenlos starten</span>
+            </div>
+
+            <a class="cta-btn" href="#">
+                <span>Im App Store laden</span>
+                <span>↗</span>
+            </a>
+        </div>
+
+        <div class="section-label">App Einblicke</div>
+
         <div class="screenshot-row">
             <img src="images/screen 1.png" alt="App Screenshot 1">
             <img src="images/screen 2.png" alt="App Screenshot 2">
@@ -380,9 +522,195 @@
             <img src="images/screen 5.png" alt="App Screenshot 5">
         </div>
 
-        <!-- Weitere Cards hier ... (unverändert) -->
+        <!-- ── Intro-Karten ── -->
+        <div class="section-label">So funktioniert's</div>
 
-        <!-- Footer -->
+        <div class="card">
+            <div class="card-header">
+                <span class="card-icon">🧠</span>
+                <span class="card-title">Lerne gezielt statt wahllos</span>
+            </div>
+            <div class="card-body">
+                <p>
+                    Die App zeigt dir genau die Wörter, die du noch nicht kannst.
+                    Im <strong style="color:#FFD700;">Premium-Modus</strong> passiert das automatisch – ohne Planen,
+                    ohne Sortieren.
+                </p>
+                <p>
+                    Im kostenlosen Modus kannst du sofort starten: Vokabeln lernen, verwalten und dich mit zufälligem
+                    Training verbessern.
+                </p>
+                <ul class="feature-list" style="margin-top: 12px;">
+                    <li>
+                        <span class="feature-dot dot-purple">●</span>
+                        Schwierige Vokabeln tauchen häufiger auf
+                    </li>
+                    <li>
+                        <span class="feature-dot dot-purple">●</span>
+                        Bekannte Vokabeln erscheinen seltener
+                    </li>
+                </ul>
+                <p style="margin-top: 10px; font-size: 13px; color: #AAAAAA;">
+                    So behältst du mehr – mit weniger Aufwand.
+                </p>
+            </div>
+        </div>
+
+        <!-- ── Privacy ── -->
+        <div class="card">
+            <div class="card-header">
+                <span class="card-icon">🔒</span>
+                <span class="card-title">100 % offline. 100 % privat.</span>
+            </div>
+            <div class="card-body">
+                <p>Alle Daten bleiben auf deinem Gerät. Auch Übersetzungen und Vorschläge funktionieren komplett
+                    offline.</p>
+                <div class="privacy-grid">
+                    <div class="privacy-item">
+                        <div class="privacy-item-icon">👤</div>
+                        <div class="privacy-item-text">Kein Account</div>
+                    </div>
+                    <div class="privacy-item">
+                        <div class="privacy-item-icon">☁️</div>
+                        <div class="privacy-item-text">Keine Cloud</div>
+                    </div>
+                    <div class="privacy-item">
+                        <div class="privacy-item-icon">🚫</div>
+                        <div class="privacy-item-text">Kein Tracking</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── Beide Richtungen ── -->
+        <div class="card">
+            <div class="card-header">
+                <span class="card-icon">🔁</span>
+                <span class="card-title">Trainiere wirkliches Sprachverständnis</span>
+            </div>
+            <div class="card-body">
+                <p>Du lernst aktiv in beide Richtungen – nicht nur Wiedererkennen, sondern echtes Anwenden.</p>
+                <div class="direction-row">
+                    <div class="dir-card">
+                        <div class="dir-card-label">Abfrage</div>
+                        <div class="dir-card-lang">Deutsch</div>
+                    </div>
+                    <span class="dir-arrow">⇄</span>
+                    <div class="dir-card">
+                        <div class="dir-card-label">Abfrage</div>
+                        <div class="dir-card-lang">Fremdsprache</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── Inbox ── -->
+        <div class="card">
+            <div class="card-header">
+                <span class="card-icon">📥</span>
+                <span class="card-title">Du behältst die Kontrolle</span>
+            </div>
+            <div class="card-body">
+                <p>
+                    Neue Vokabeln landen zuerst in deiner <strong style="color:#fde047;">Merkliste</strong>.
+                    Erst wenn du sie freigibst, werden sie Teil deines Trainings.
+                </p>
+                <p style="color: #a89fff; font-weight: 600; margin-top: 4px;">
+                    Kein Chaos. Kein Überladen.
+                </p>
+            </div>
+        </div>
+
+        <!-- ── Schnell starten ── -->
+        <div class="card">
+            <div class="card-header">
+                <span class="card-icon">⚡</span>
+                <span class="card-title">Schnell starten</span>
+            </div>
+            <div class="card-body">
+                <ul class="feature-list">
+                    <li>
+                        <span class="feature-dot dot-cyan">●</span>
+                        Vokabeln manuell eingeben
+                    </li>
+                    <li>
+                        <span class="feature-dot dot-cyan">●</span>
+                        Automatische Übersetzungsvorschläge (offline)
+                    </li>
+                    <li>
+                        <span class="feature-dot dot-cyan">●</span>
+                        Aussprache per Text-to-Speech
+                    </li>
+                </ul>
+                <p style="margin-top: 12px; font-size: 13px; color: #AAAAAA;">
+                    Alles direkt auf deinem Gerät – ohne Internetverbindung.
+                </p>
+            </div>
+        </div>
+
+        <!-- ── Fortschritt ── -->
+        <div class="section-label">Dein Fortschritt</div>
+
+        <div class="stats-row">
+            <div class="stat-card">
+                <div class="stat-icon">🔥</div>
+                <div class="stat-label">Lernstreak &amp; Motivation</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">🎯</div>
+                <div class="stat-label">Trefferquote</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-icon">📊</div>
+                <div class="stat-label">Lernverlauf</div>
+            </div>
+        </div>
+
+        <!-- ── Sprachen ── -->
+        <div class="card">
+            <div class="card-header">
+                <span class="card-icon">🌍</span>
+                <span class="card-title">Unterstützte Sprachen</span>
+            </div>
+            <div class="card-body">
+                <div class="lang-row">
+                    <span class="lang-chip">🇬🇧 Englisch</span>
+                    <span class="lang-chip">🇫🇷 Französisch</span>
+                    <span class="lang-chip">🇪🇸 Spanisch</span>
+                    <span class="lang-chip">🇮🇹 Italienisch</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ── Premium ── -->
+        <div class="section-label">Premium</div>
+
+        <div class="card-premium">
+            <div class="premium-header">
+                <span class="premium-badge">💎 PREMIUM</span>
+            </div>
+            <p class="premium-title" style="margin-bottom: 14px;">Das bekommst du zusätzlich</p>
+            <ul class="feature-list">
+                <li>
+                    <span class="feature-dot dot-gold">★</span>
+                    Automatisch gesteuertes Training nach deinem Lernstand
+                </li>
+                <li>
+                    <span class="feature-dot dot-gold">★</span>
+                    Schwierige Wörter gezielt wiederholen
+                </li>
+                <li>
+                    <span class="feature-dot dot-gold">★</span>
+                    Fehlertraining
+                </li>
+                <li>
+                    <span class="feature-dot dot-gold">★</span>
+                    Backup &amp; Wiederherstellung
+                </li>
+            </ul>
+        </div>
+
+        <!-- ── Footer ── -->
         <div class="footer">
             <p>
                 <a href="datenschutz.html">Datenschutzerklärung</a> ·
@@ -391,15 +719,17 @@
             </p>
             <p style="margin-top: 6px;">© 2026 Dr. Jürgen Kuck · Aachen</p>
         </div>
+
+    </div>
     </div>
 
-    <!-- Lightbox -->
+    <!-- 🔥 Lightbox -->
     <div id="lightbox" class="lightbox">
         <img id="lightbox-img" src="" alt="">
     </div>
 
     <script>
-        const items = document.querySelectorAll('.screenshot-row img');
+        const items = document.querySelectorAll('.screenshot');
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
 
@@ -429,7 +759,6 @@
             window.scrollTo(0, scrollY);
         }
 
-        // Lightbox öffnen
         items.forEach(item => {
             item.addEventListener('click', () => {
                 lightboxImg.src = item.src;
@@ -438,7 +767,6 @@
             });
         });
 
-        // Lightbox schließen
         lightbox.addEventListener('click', () => {
             lightbox.classList.remove('active');
             unlockScroll();
